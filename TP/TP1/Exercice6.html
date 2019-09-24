@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercice 6</title>
+</head>
+
+<body>
+    <input type="text" name="montant" id="montant" />
+    <select name="devise" id="devise">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+    </select>
+    <button id="calculer">Calculer</button>
+    <p id="resultat"></p>
+</body>
+<script>
+    calculer.addEventListener("click", calcul);
+    function calcul() {
+        if (devise.value == "USD") {
+            resultat.innerHTML =
+                montant.value + "EUR -> " + montant.value * 1.1 + " USD";
+        } else {
+            resultat.innerHTML =
+                montant.value + "USD -> " + montant.value * 0.9 + " EUR";
+        }
+    }
+</script>
+
+</html>

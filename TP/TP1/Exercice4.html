@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 4</title>
+</head>
+
+<body>
+    <input type="text" name="montantMensuel" id="montantMensuel">
+    <input type="text" name="nombreAnnee" id="nombreAnnee">
+    <button id="boutonCalcul">Calculer</button>
+    <p id="phrase"></p><span id="resultat"></span>
+</body>
+<script>
+    boutonCalcul.addEventListener("click", calcul);
+    function calcul() {
+        phrase.innerHTML = 'votre épargne totale sera de : ';
+        resultat.innerHTML = montantMensuel.value * 12 * nombreAnnee.value;
+    }
+</script>
+
+</html>
